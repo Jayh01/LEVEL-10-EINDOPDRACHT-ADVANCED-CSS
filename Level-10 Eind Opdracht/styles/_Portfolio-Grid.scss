@@ -1,0 +1,81 @@
+.portfolio {
+  width: 100%;
+}
+
+.portfolio > header h1 {
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: $basis-achtergrond;
+  grid-gap: 6px;
+  overflow: hidden;
+
+  figure {
+    position: relative;
+  }
+
+  figure img {
+    display: block;
+    width: 100%;
+    border-radius: 7px;
+  }
+
+  figure .overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: #252b3e;
+    border-radius: 7px;
+    opacity: 0;
+    transition: 0.2s cubic-bezier(0.45, 0.03, 0.4, 1.02);
+  }
+
+  & figure .overlay:hover {
+    opacity: 1;
+  }
+
+  /*----btn read more----*/
+
+  figure > span > button {
+    display: none;
+    position: absolute;
+    bottom: 26%;
+    left: 26%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    width: 58%;
+    height: 10%;
+  }
+
+  figure > span > button a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 15px 35px;
+  }
+  /*--btn effect read more--*/
+  & figure span:hover button {
+    display: block;
+  }
+}
+
+/*----------------------@media queries------------------------*/
+
+/*----tablet---*/
+@media screen and (max-width: 960px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/*----Mobile---*/
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

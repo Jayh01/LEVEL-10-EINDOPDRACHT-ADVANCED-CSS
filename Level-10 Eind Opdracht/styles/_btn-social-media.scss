@@ -1,0 +1,68 @@
+$social-media-icon: rgb(255, 255, 255);
+
+/*------------btn social-media--------------*/
+
+.social-media {
+  margin-top: 67px;
+  margin-bottom: 100px;
+  margin-right: 0px;
+  display: block;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    transition: 1s;
+  }
+
+  div > a {
+    margin: 5px;
+    padding: 10px;
+    transition: 0.5s ease-in;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    width: 30px;
+    overflow: hidden;
+  }
+
+  & div > a:hover {
+    width: 140px;
+    margin: 5px;
+    padding: 10px;
+    display: inline-flex;
+  }
+
+  div > a span {
+    display: none;
+    overflow: hidden;
+  }
+
+  & div > a:hover span {
+    display: block;
+  }
+
+  div i {
+    margin-right: 10px;
+  }
+
+  /*---icon social media kleur---*/
+
+  div > a:nth-child(1) {
+    background-color: #00aced;
+    color: $social-media-icon;
+  }
+  div > a:nth-child(2) {
+    background-color: #007bb6;
+    color: $social-media-icon;
+  }
+  div > a:nth-child(3) {
+    background-color: #3b5998;
+    color: $social-media-icon;
+  }
+  div > a:nth-child(4) {
+    background-color: #333;
+    color: $social-media-icon;
+  }
+}

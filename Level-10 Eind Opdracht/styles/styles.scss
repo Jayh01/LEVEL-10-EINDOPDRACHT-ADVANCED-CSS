@@ -1,0 +1,12 @@
+$basis-achtergrond: #c3cfe2;
+
+@import "./testimonial";
+@import "./Portfolio-Grid";
+@import "./btn-social-media";
+
+/*Basis setup*/
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: $basis-achtergrond;
+  padding: 5px;
+}

@@ -1,0 +1,85 @@
+$testimonial-border-radius: 30px;
+$font-size: 22px;
+$testimonial-font-mobile: 19px;
+@mixin flexbox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*--------testimonial--------*/
+.testimonial {
+  display: flex;
+  justify-content: center;
+
+  .testimonial-container {
+    @include flexbox;
+    width: 400px;
+  }
+}
+
+article.testimonial-box > p {
+  border-top-left-radius: $testimonial-border-radius;
+  border-top-right-radius: $testimonial-border-radius;
+  background-color: #ffffff;
+  margin-bottom: 0px;
+  padding: 30px 30px 70px;
+  font-size: $font-size;
+}
+
+figure.testimonial {
+  @include flexbox;
+  background-color: #686de0;
+  color: rgb(255, 255, 255);
+  margin: 0px;
+  border-bottom-left-radius: $testimonial-border-radius;
+  border-bottom-right-radius: $testimonial-border-radius;
+  position: relative;
+  padding-bottom: 25px;
+}
+
+.img-container {
+  background-color: white;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: -53px;
+}
+
+.testimonial > p {
+  margin-top: 70px;
+  margin-bottom: 0px;
+  font-size: $font-size;
+}
+
+.testimonial.foto > a {
+  margin-bottom: 10px;
+  font-size: $font-size;
+}
+
+.testimonial.foto img {
+  width: 105px;
+  border-radius: 50%;
+}
+/*----------------------@media queries------------------------*/
+
+@media screen and (max-width: 400px) {
+  .testimonial-container {
+    width: 330px;
+  }
+
+  article.testimonial-box > p {
+    font-size: $testimonial-font-mobile;
+  }
+
+  .testimonial > p {
+    font-size: $testimonial-font-mobile;
+  }
+  figure.testimonial.foto > a {
+    font-size: $testimonial-font-mobile;
+  }
+}
